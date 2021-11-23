@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import './Lapsteelator.css';
 import './Canvas.css';
-
+const uri = process.env.REACT_APP_URI;
 
 
 let data = {
@@ -31,15 +31,15 @@ let num_fret_17 = new Image();
 let num_fret_19 = new Image();
 var num_fret_21 = new Image();
 
-num_fret_3.src = './images/image-fret/num_fret_3.gif';
-num_fret_5.src = './images/image-fret/num_fret_5.gif';
-num_fret_7.src = './images/image-fret/num_fret_7.gif';
-num_fret_9.src = './images/image-fret/num_fret_9.gif';
-num_fret_12.src = './images/image-fret/num_fret_12.gif';
-num_fret_15.src = './images/image-fret/num_fret_15.gif';
-num_fret_17.src = './images/image-fret/num_fret_17.gif';
-num_fret_19.src = './images/image-fret/num_fret_19.gif';
-num_fret_21.src = './images/image-fret/num_fret_21.gif';
+num_fret_3.src =  uri +'/images/image-fret/num_fret_3.gif';
+num_fret_5.src =  uri +'/images/image-fret/num_fret_5.gif';
+num_fret_7.src =  uri +'/images/image-fret/num_fret_7.gif';
+num_fret_9.src =  uri +'/images/image-fret/num_fret_9.gif';
+num_fret_12.src =  uri +'/images/image-fret/num_fret_12.gif';
+num_fret_15.src =  uri +'/images/image-fret/num_fret_15.gif';
+num_fret_17.src =  uri +'/images/image-fret/num_fret_17.gif';
+num_fret_19.src =  uri +'/images/image-fret/num_fret_19.gif';
+num_fret_21.src =  uri +'/images/image-fret/num_fret_21.gif';
     
 //images des notes
 let c = new Image();
@@ -56,19 +56,19 @@ let adi = new Image();
 let b = new Image();
 let vide = new Image();
 
-c.src = '/images/image-note-active/C.gif';
-cd.src = '/images/image-note-active/Cd.gif';
-d.src = '/images/image-note-active/D.gif';
-dd.src = '/images/image-note-active/Dd.gif';
-e.src = '/images/image-note-active/E.gif';
-f.src = '/images/image-note-active/F.gif';
-fd.src = '/images/image-note-active/Fd.gif';
-g.src = '/images/image-note-active/G.gif';
-gd.src = '/images/image-note-active/Gd.gif';
-a.src = '/images/image-note-active/A.gif';
-adi.src = '/images/image-note-active/Adi.gif';
-b.src = '/images/image-note-active/B.gif';
-vide.src = '/images/image-note-active/vide.gif';
+c.src =  uri +'/images/image-note-active/C.gif';
+cd.src =  uri +'/images/image-note-active/Cd.gif';
+d.src =  uri +'/images/image-note-active/D.gif';
+dd.src =  uri +'/images/image-note-active/Dd.gif';
+e.src =  uri +'/images/image-note-active/E.gif';
+f.src =  uri +'/images/image-note-active/F.gif';
+fd.src =  uri +'/images/image-note-active/Fd.gif';
+g.src = uri + '/images/image-note-active/G.gif';
+gd.src =  uri +'/images/image-note-active/Gd.gif';
+a.src = uri +'/images/image-note-active/A.gif';
+adi.src =  uri +'/images/image-note-active/Adi.gif';
+b.src =  uri +'/images/image-note-active/B.gif';
+vide.src =  uri +'/images/image-note-active/vide.gif';
 
 
 //images des notes accordage du manche
@@ -85,18 +85,18 @@ let a_manche = new Image();
 let ad_manche = new Image();
 let b_manche = new Image();
 
-c_manche.src = '/images/image-accordage/C_manche.gif';
-cd_manche.src = '/images/image-accordage/Cd_manche.gif';
-d_manche.src = '/images/image-accordage/D_manche.gif';
-dd_manche.src = '/images/image-accordage/Dd_manche.gif';
-e_manche.src = '/images/image-accordage/E_manche.gif';
-f_manche.src = '/images/image-accordage/F_manche.gif';
-fd_manche.src = '/images/image-accordage/Fd_manche.gif';
-g_manche.src = '/images/image-accordage/G_manche.gif';
-gd_manche.src = '/images/image-accordage/Gd_manche.gif';
-a_manche.src = '/images/image-accordage/A_manche.gif';
-ad_manche.src = '/images/image-accordage/Ad_manche.gif';
-b_manche.src = '/images/image-accordage/B_manche.gif';
+c_manche.src =  uri +'/images/image-accordage/C_manche.gif';
+cd_manche.src = uri +'/images/image-accordage/Cd_manche.gif';
+d_manche.src = uri + '/images/image-accordage/D_manche.gif';
+dd_manche.src = uri + '/images/image-accordage/Dd_manche.gif';
+e_manche.src =  uri +'/images/image-accordage/E_manche.gif';
+f_manche.src =  uri +'/images/image-accordage/F_manche.gif';
+fd_manche.src =  uri +'/images/image-accordage/Fd_manche.gif';
+g_manche.src =  uri +'/images/image-accordage/G_manche.gif';
+gd_manche.src = uri +'/images/image-accordage/Gd_manche.gif';
+a_manche.src =  uri +'/images/image-accordage/A_manche.gif';
+ad_manche.src =  uri +'/images/image-accordage/Ad_manche.gif';
+b_manche.src =  uri +'/images/image-accordage/B_manche.gif';
 
 
 //images des notes toniques selectionnées 
@@ -113,23 +113,23 @@ let a_tonique = new Image();
 let ad_tonique = new Image();
 let b_tonique = new Image();
 
-c_tonique.src = '/images/image-tonique-selected/C_tonique.gif';
-cd_tonique.src = '/images/image-tonique-selected/Cd_tonique.gif';
-d_tonique.src = '/images/image-tonique-selected/D_tonique.gif';
-dd_tonique.src = '/images/image-tonique-selected/Dd_tonique.gif';
-e_tonique.src = '/images/image-tonique-selected/E_tonique.gif';
-f_tonique.src = '/images/image-tonique-selected/F_tonique.gif';
-fd_tonique.src = '/images/image-tonique-selected/Fd_tonique.gif';
-g_tonique.src = '/images/image-tonique-selected/G_tonique.gif';
-gd_tonique.src = '/images/image-tonique-selected/Gd_tonique.gif';
-a_tonique.src = '/images/image-tonique-selected/A_tonique.gif';
-ad_tonique.src = '/images/image-tonique-selected/Ad_tonique.gif';
-b_tonique.src = '/images/image-tonique-selected/B_tonique.gif';
+c_tonique.src = uri +'/images/image-tonique-selected/C_tonique.gif';
+cd_tonique.src = uri +'/images/image-tonique-selected/Cd_tonique.gif';
+d_tonique.src = uri + '/images/image-tonique-selected/D_tonique.gif';
+dd_tonique.src = uri + '/images/image-tonique-selected/Dd_tonique.gif';
+e_tonique.src =  uri +'/images/image-tonique-selected/E_tonique.gif';
+f_tonique.src = uri + '/images/image-tonique-selected/F_tonique.gif';
+fd_tonique.src = uri + '/images/image-tonique-selected/Fd_tonique.gif';
+g_tonique.src =  uri +'/images/image-tonique-selected/G_tonique.gif';
+gd_tonique.src = uri + '/images/image-tonique-selected/Gd_tonique.gif';
+a_tonique.src =  uri +'/images/image-tonique-selected/A_tonique.gif';
+ad_tonique.src = uri + '/images/image-tonique-selected/Ad_tonique.gif';
+b_tonique.src = uri + '/images/image-tonique-selected/B_tonique.gif';
 
 let guitar_bg = new Image();
 //guitar_bg.src = '/images/image-manche/neck_guitar.gif';
 let mode = new Image();
-mode.src = '/mode.png';
+mode.src = uri + '/mode.png';
 
 
 // cordes en y           1  2   3   4   5   6              
@@ -409,9 +409,9 @@ class Canvas extends Component{
 
     //image du manche de la guitare
     if(widthEcran < 1000){
-      guitar_bg.src = '/images/image-manche/neck_guitar_mobile.gif';
+      guitar_bg.src = uri + '/images/image-manche/neck_guitar_mobile.gif';
     }else{
-      guitar_bg.src = '/images/image-manche/neck_guitar.gif';
+      guitar_bg.src =  uri +'/images/image-manche/neck_guitar.gif';
     }
     
 
